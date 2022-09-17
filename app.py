@@ -2,12 +2,15 @@ from dash import Dash, html, dcc
 import dash
 import dash_bootstrap_components as dbc
 from components import components, utilities
+from settings import settings
 import os
 
 app = Dash(__name__, external_stylesheets=[
            dbc.themes.JOURNAL], use_pages=True)
+server = app.server
+
 page_name = os.path.basename(__file__).replace(".py", "")
-settings = utilities.get_settings()
+settings  #= utilities.get_settings()
 
 app.layout = dbc.Container(children=[
 
@@ -15,7 +18,7 @@ app.layout = dbc.Container(children=[
         dbc.Row(
             dbc.Col(
                 html.Div([
-                    components.app_heading(settings["app"]["app_heading"]),
+                    components.app_heading(settings.settings["app"]["app_heading"]),
                 ]),
             ), style={"marginLeft":"15px","marginRight":"15px"}
         ),

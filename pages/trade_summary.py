@@ -2,15 +2,14 @@ import dash
 from dash import html, dash_table, Output, Input, State, callback
 import dash_bootstrap_components as dbc
 from components import components, utilities
+from settings import settings
 
 dash.register_page(__name__, path='/trade_summary')
 
-page_settings = utilities.get_page_settings(
-    utilities.get_module_name(__file__))
 layout = dbc.Container([
     dbc.Row([
             dbc.Col(
-                components.page_heading(page_settings["page_heading"]),
+                components.page_heading(settings.settings["pages"]["trade_summary"]["page_heading"]),
             ),
    ]),
     dbc.Row(

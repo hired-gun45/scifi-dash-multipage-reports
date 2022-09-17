@@ -1,19 +1,10 @@
-{
+settings = {
     "app": {
         "app_heading": "Scifi Trade Reporting"
     },
     "pages": {
         "home": {
             "page_heading": "Trading Time Series"
-        },
-        "analytics": {
-            "page_heading": "Generic analytics heading"
-        },
-        "archive": {
-            "page_heading": "Generic archive heading"
-        },
-        "play": {
-            "page_heading": "This is my play heading"
         },
         "trade_summary": {
             "page_heading": "Position Summary"

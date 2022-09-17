@@ -4,19 +4,18 @@ import dash_bootstrap_components as dbc
 from datetime import date
 import json
 from components import components, utilities
+from settings import settings
 import pages.home_fns
 
 dash.register_page(__name__, path='/')
 
 home = pages.home_fns.home
 
-page_settings = utilities.get_page_settings(
-    utilities.get_module_name(__file__))
 layout = dbc.Container([
     dbc.Container([
         dbc.Row([
             dbc.Col([
-                components.page_heading(page_settings["page_heading"]),
+                components.page_heading(settings.settings["pages"]["home"]["page_heading"]),
             ]),
         ]),
         dbc.Row([
